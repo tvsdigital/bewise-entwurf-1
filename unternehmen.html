@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Für Unternehmen | Bewise – Strategisches Recruiting</title>
+    <meta name="description" content="Maßgeschneiderte Recruiting-Lösungen für Ihr Unternehmen. Wir finden die Talente, die Ihre Vision teilen.">
+    
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --color-primary: #1a1a1a;
+            --color-accent: #D4C5B3; 
+            --color-accent-hover: #C4B5A3;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--color-primary);
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-nav {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 197, 179, 0.3);
+        }
+
+        .section-padding {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .image-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.05) 100%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 glass-nav">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-serif font-bold tracking-tighter">BEWISE</span>
+                <span class="h-6 w-[1px] bg-gray-300 mx-2 hidden md:block"></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 hidden md:block leading-none">Recruiting &<br>HR Management</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-sm font-medium tracking-wide uppercase">
+                <a href="unternehmen.html" class="text-amber-800 transition-colors border-b border-amber-800">Unternehmen</a>
+                <a href="index.html#bewerber" class="hover:text-amber-700 transition-colors">Bewerber</a>
+                <a href="index.html#stellenangebote" class="hover:text-amber-700 transition-colors">Stellenangebote</a>
+                <a href="#kontakt" class="hover:text-amber-700 transition-colors">Kontakt</a>
+            </div>
+
+            <button class="md:hidden" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="pt-40 pb-20 bg-[#f9f7f5]">
+            <div class="container mx-auto px-6">
+                <span class="inline-block px-4 py-1 border border-gray-200 rounded-full text-[10px] uppercase tracking-[0.2em] mb-6 bg-white">Für Arbeitgeber</span>
+                <h1 class="text-5xl md:text-6xl font-serif leading-tight max-w-3xl">
+                    Finden Sie die Talente, die Ihr Unternehmen <span class="italic">wirklich</span> weiterbringen.
+                </h1>
+            </div>
+        </section>
+
+        <!-- Content Section 1: Text & Image -->
+        <section class="section-padding bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="animate__animated animate__fadeInLeft">
+                        <h2 class="text-3xl font-serif mb-6">Partnerschaft auf Augenhöhe</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Wir verstehen, dass jede Vakanz mehr ist als nur eine Liste von Anforderungen. Es geht um Kultur, Vision und das perfekte Zusammenspiel von Kompetenz und Persönlichkeit.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Als Ihre externe HR-Abteilung oder spezialisierte Recruiting-Einheit übernehmen wir den gesamten Prozess – von der ersten Profilanalyse bis zum erfolgreichen Onboarding. Dabei agieren wir stets diskret, präzise und mit dem nötigen Fingerspitzengefühl für den Markt.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center space-x-3 text-sm font-medium">
+                                <i data-lucide="check" class="w-5 h-5 text-amber-700"></i>
+                                <span>Exklusiver Zugang zu unserem High-End Netzwerk</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm font-medium">
+                                <i data-lucide="check" class="w-5 h-5 text-amber-700"></i>
+                                <span>Entlastung Ihrer internen HR-Ressourcen</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm font-medium">
+                                <i data-lucide="check" class="w-5 h-5 text-amber-700"></i>
+                                <span>Nachhaltige Besetzung kritischer Schlüsselpositionen</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image-overlay rounded-sm shadow-2xl animate__animated animate__fadeInRight">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Team Meeting in modernem Büro" 
+                             class="w-full aspect-[4/3] object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section 2: Visual Impact -->
+        <section class="pb-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-8 items-end">
+                    <div class="hidden md:block">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Analyse und Strategie" 
+                             class="w-full aspect-square object-cover rounded-sm grayscale-[10%]">
+                    </div>
+                    <div class="bg-[#1a1a1a] text-white p-12 md:p-20 rounded-sm relative -mb-16 z-10">
+                        <h3 class="text-2xl font-serif mb-6 text-[#D4C5B3]">Unsere Methodik</h3>
+                        <p class="text-gray-400 text-sm leading-loose mb-0">
+                            Wir setzen auf datengestützte Analysen kombiniert mit psychologischem Know-how. Jedes Talent wird von uns persönlich gescreent, um sicherzustellen, dass nicht nur die Hard Skills, sondern auch der "Cultural Fit" zu Ihrem Unternehmen passt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontaktformular Section -->
+        <section id="kontakt" class="section-padding bg-[#fcfcfc] border-t border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl font-serif mb-4">Lassen Sie uns sprechen.</h2>
+                    <p class="text-gray-500">Teilen Sie uns Ihren Bedarf mit – wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 shadow-xl border border-gray-50">
+                    <form action="#" method="POST" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Unternehmen</label>
+                                <input type="text" name="company" required placeholder="Ihr Unternehmen GmbH" 
+                                       class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-amber-700 transition-colors bg-transparent placeholder:text-gray-200">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Ansprechpartner</label>
+                                <input type="text" name="name" required placeholder="Name, Vorname" 
+                                       class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-amber-700 transition-colors bg-transparent placeholder:text-gray-200">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">E-Mail für Rückfragen</label>
+                            <input type="email" name="email" required placeholder="ihre.mail@unternehmen.de" 
+                                   class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-amber-700 transition-colors bg-transparent placeholder:text-gray-200">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Was suchen Sie?</label>
+                            <textarea name="request" rows="4" placeholder="Beschreiben Sie kurz die gesuchte Position oder Herausforderung..." 
+                                      class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-amber-700 transition-colors bg-transparent resize-none placeholder:text-gray-200"></textarea>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full btn-primary py-5 text-xs uppercase tracking-widest font-bold">
+                                Beratungsgespräch anfragen
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-20 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding & Slogan -->
+                <div class="col-span-2">
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <span class="text-2xl font-serif font-bold tracking-tighter">BEWISE</span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+                        Strategische Personalberatung für Unternehmen, die über den Standard hinauswachsen wollen. Exzellenz, Diskretion und nachhaltiger Erfolg.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-[10px] uppercase tracking-[0.2em] font-bold mb-6 text-gray-400">Navigation</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#unternehmen" class="hover:text-amber-700 transition-colors">Unternehmen</a></li>
+                        <li><a href="#bewerber" class="hover:text-amber-700 transition-colors">Bewerber</a></li>
+                        <li><a href="#stellenangebote" class="hover:text-amber-700 transition-colors">Stellenangebote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials -->
+                <div>
+                    <h4 class="text-[10px] uppercase tracking-[0.2em] font-bold mb-6 text-gray-400">Social Media</h4>
+                    <div class="flex space-x-5">
+                        <a href="https://instagram.com/bewise_recruiting" target="_blank" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-black hover:text-amber-700 transition-all duration-300">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-black hover:text-amber-700 transition-all duration-300">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-50 space-y-4 md:space-y-0">
+                <div class="text-[10px] uppercase tracking-widest text-gray-400">
+                    &copy; 2024 Bewise | Recruiting & HR Management.
+                </div>
+                <div class="flex space-x-8 text-[10px] uppercase tracking-widest font-medium">
+                    <a href="impressum.html" class="hover:text-black transition-colors">Impressum</a>
+                    <a href="datenschutz.html" class="hover:text-black transition-colors">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
